@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "allowme_homologios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/allowme_homologIOS",
+      "state" : {
+        "revision" : "ea9aaaed265e2bd2ac73b71128fec1abe1c18305",
+        "version" : "2.2.5"
+      }
+    },
+    {
+      "identity" : "allowme_productionios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/allowme_productionIOS",
+      "state" : {
+        "revision" : "f5d44fe87b9f1dac829a8942cdd8c20867c32857",
+        "version" : "2.2.5"
+      }
+    }
+  ],
+  "version" : 2
+}
