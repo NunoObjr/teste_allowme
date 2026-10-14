@@ -3,7 +3,8 @@ import Flutter
 import BackgroundTasks
 
 import AllowMeSDKHomolog
-let ALLOWME_API_KEY = "KB3KByTN4CjXGOjy0MRO0F8c1R5CrZrXlD5rsTwi"
+// A chave vem do Info.plist (AllowMeApiKey), preenchida a partir de ios/Flutter/Secrets.xcconfig (não versionado).
+let ALLOWME_API_KEY = Bundle.main.object(forInfoDictionaryKey: "AllowMeApiKey") as? String ?? ""
 
 var methodChannel: FlutterMethodChannel?
 

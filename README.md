@@ -51,7 +51,18 @@ flutter pub get
 flutter run
 ```
 
-> **Segurança:** a chave de API do SDK **não deve ficar versionada no código**. Mantenha-a fora do repositório (variáveis de build, `local.properties`, xcconfig ignorado pelo Git) e revogue/rotacione qualquer chave que já tenha sido commitada.
+### Chave de API (iOS)
+
+A chave **não fica no código**. O `AppDelegate.swift` a lê do `Info.plist` (`AllowMeApiKey`), que por sua vez recebe `$(ALLOWME_API_KEY)` do arquivo `ios/Flutter/Secrets.xcconfig` — o equivalente nativo do `.env`:
+
+```bash
+cp ios/Flutter/Secrets.xcconfig.example ios/Flutter/Secrets.xcconfig
+# edite o arquivo e informe sua chave (ele é ignorado pelo Git)
+```
+
+No Android, a chave é lida do recurso `api_key` em `android/app/src/main/res/values/strings.xml` (vazio no repositório); preencha-o localmente sem commitar.
+
+> **Segurança:** a chave que estava no código foi removida, mas continua no histórico do Git. **Revogue-a no painel da AllowMe e gere outra.**
 
 ## Stack
 

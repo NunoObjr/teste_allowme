@@ -39,3 +39,7 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+# Segredos locais
+.env
+ios/Flutter/Secrets.xcconfig
